@@ -1,7 +1,7 @@
 # mne-dcm
 Dynamic Causal Modelling in MNE-python
 
-#Overview
+# Overview
 
 Dynamic Causal Modelling (DCM) is a framework for modelling (primarily) neuroimaging data signals using biophysically-based neural population models, with an emphasis on (small) networks and estimation of effective connectivity. DCM lives inside SPM, somewhat confusingly spread across multiple sub-toolboxes, and following the standard SPM convention of being cryptically coded and poorly (if at all) documented. This project aims to liberate DCM from these squalid matlab shackles, and (to mix metaphors somewhat) unleash unto it the beast that is the mne-python and broader nipy development community. A subsidiary aim is to make some of the better parts of the DCM optimization machinery available to the neurophysiological modelling and neuroinformatics platform The Virtual Brain (TVB).
 
@@ -9,6 +9,18 @@ There’s really two components to DCM – the neural modelling part, which (for
 
 There should be many interesting questions that come up along the way, to do with improvements and general integration with other nipy and generic python libraries. Can we make use of other python libraries such as scikit-learn for parts of this? Would the VB-inversion routine be useful for fitting non-DCM models in MNE? Etc. etc. I’m hoping to get lots of feedback and good ideas from the imaging community on these Qs.
 
-#Plan
+
+# Plan
+
+
+The main thing we need to do is port several matlab functions to python. Including:
+
+[spm_fx_erp.m](https://github.com/neurodebian/spm12/blob/master/toolbox/dcm_meeg/spm_fx_erp.m) (Jansen-Rit-David model equations for ERP simulation)
+[spm_int_L.m](https://github.com/neurodebian/spm12/blob/master/spm_int_L.m) (integrator with explicit Jacobian)
+[spm_int_ode.m](https://github.com/neurodebian/spm12/blob/master/spm_int_ode.m) (generic ode integrator)
+[spm_nlsi_N.m](https://github.com/neurodebian/spm12/blob/master/spm_nlsi_N.m) (nonlinear system identification - i.e. model fitting)
+
+Each of these do have lots of other dependendencies that will also need to be dealt with. 
+
 
 
