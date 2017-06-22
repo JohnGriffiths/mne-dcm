@@ -20,7 +20,7 @@ The main thing we need to do is port several matlab functions to python. Includi
 [spm_int_ode.m](https://github.com/neurodebian/spm12/blob/master/spm_int_ode.m) (generic ode integrator)
 [spm_nlsi_N.m](https://github.com/neurodebian/spm12/blob/master/spm_nlsi_N.m) (nonlinear system identification - i.e. model fitting)
 
-Each of these do have lots of other dependendencies that will also need to be dealt with. 
+Each of these do have lots of other dependencies that will also need to be dealt with. 
 
 
 
