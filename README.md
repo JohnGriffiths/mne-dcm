@@ -23,4 +23,30 @@ The main thing we need to do is port several matlab functions to python. Includi
 Each of these do have lots of other dependencies that will also need to be dealt with. 
 
 
+# Getting started
+
+If you are new to SPM and/or DCM, I suggest the following to get going:
+
+1. Download SPM from the website; or (easier), clone the neurodebian github repository
+
+`git clone https://github.com/neurodebian/spm12`
+
+
+2. Play around with the DCM demos. 
+
+Start up matlab & initialize spm
+
+`addpath(spm_folder)`
+`spm eeg`
+
+Close GUI windows. 
+
+Look for 'DEMO' files in the 'Neural Models' and 'dcm_meeg' toolboxes, such as [this one](https://github.com/neurodebian/spm12/blob/master/toolbox/Neural_Models/DEMO_model_reduction_ERP.m)
+
+`run DEMO_model_reduction_ERP.m`
+
+Browse through the code and check out the functions calls and function calls therein, etc. 
+
+
+
 
